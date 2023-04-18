@@ -1,10 +1,16 @@
 
-   const names = ["Guadalupe", "Ollie", "Aki"]
-function writeCards(names, event) { 
-   return  names.map(name=> `Thank you, ${name}, for the wonderful ${event} gift!`)
+function writeCards(array, surprise) {
+  let arr = [];
+  for (let i = 0; i < array.length; i++) {
+    arr.push(`Thank you, ${array[i]}, for the wonderful ${surprise} gift!`);
+  }
+  return arr;
 }
-console.log(writeCards(names, "birthday"))
-        
-for (let countDown = 0; countDown < 10; countDown = countDown + 1) {
-    console.log("This for a for loop");
+console.log(writeCards(["Guadalupe", "Ollie", "Aki"], "birthday"));
+
+function countDown(num) {
+  while (num >= 0) {
+    console.log(num--);
+  }
 }
+countDown(10);
